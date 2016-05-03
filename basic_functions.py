@@ -3,11 +3,12 @@
 
 
 """
+Leong Chei Chau
 CP1404/CP5632 Workshop 04
 Basic functions
 demonstrating various parameters, returns and the use of a main function
 """
-__author__ = 'Lindsay Ward'
+__author__ = 'Leong Chei Chau'
 
 
 def main():
@@ -18,7 +19,10 @@ def main():
 
 def get_limits():
     minimum = int(input("Enter the minimum: "))
-    maximum = int(input("Enter the maximum: "))
+    maximum = int(input("Enter the maximum ({} or above): ".format(minimum)))
+    while maximum < minimum:
+        print("Maximum too low!")
+        maximum = int(input("Enter the maximum ({} or above): ".format(minimum)))
     return minimum, maximum
 
 
